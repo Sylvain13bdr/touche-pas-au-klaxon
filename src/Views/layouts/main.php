@@ -29,7 +29,7 @@ $pageTitle = isset($title) && is_string($title) ? $title : $appName;
         </main>
     </div>
 
-    <?= $this->renderPartial('layouts/footer', []) ?>
+    <?= $this->renderPartial('layouts/footer', ['appName' => $appName]) ?>
 
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
 </body>
