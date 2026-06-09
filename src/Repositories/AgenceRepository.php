@@ -10,7 +10,7 @@ use PDO;
 /**
  * Accès aux données de la table « agence ».
  */
-final class AgenceRepository
+class AgenceRepository
 {
     public function __construct(private readonly PDO $pdo)
     {

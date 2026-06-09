@@ -15,7 +15,7 @@ use PDO;
  * Les lectures effectuent les jointures vers les agences et l'auteur afin
  * d'hydrater des objets Trajet complets prêts pour l'affichage.
  */
-final class TrajetRepository
+class TrajetRepository
 {
     public function __construct(private readonly PDO $pdo)
     {
