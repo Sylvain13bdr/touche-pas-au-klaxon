@@ -43,7 +43,7 @@ final class AuthController extends Controller
 
         Auth::login($utilisateur);
         Session::addFlash('success', 'Bienvenue ' . $utilisateur->prenom . ' !');
-        $this->redirect('/');
+        $this->redirect($utilisateur->estAdmin() ? '/admin' : '/');
     }
 
     /** Déconnecte l'utilisateur courant. */

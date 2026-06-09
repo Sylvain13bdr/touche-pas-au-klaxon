@@ -4,7 +4,7 @@
 /** @var \App\Models\Utilisateur|null $currentUser */
 ?>
 <header class="app-header d-flex flex-wrap justify-content-between align-items-center gap-2 px-4 py-2">
-    <a href="/" class="fw-bold text-dark text-decoration-none fs-5"><?= $this->e($appName) ?></a>
+    <a href="<?= ($currentUser !== null && $currentUser->estAdmin()) ? '/admin' : '/' ?>" class="fw-bold text-dark text-decoration-none fs-5"><?= $this->e($appName) ?></a>
 
     <div class="d-flex flex-wrap align-items-center gap-2">
         <?php if ($currentUser === null): ?>

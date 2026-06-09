@@ -93,9 +93,9 @@ final class AgenceRepository
     public function countTrajets(int $id): int
     {
         $stmt = $this->pdo->prepare(
-            'SELECT COUNT(*) FROM trajet WHERE agence_depart_id = :id OR agence_arrivee_id = :id'
+            'SELECT COUNT(*) FROM trajet WHERE agence_depart_id = :dep OR agence_arrivee_id = :arr'
         );
-        $stmt->execute(['id' => $id]);
+        $stmt->execute(['dep' => $id, 'arr' => $id]);
 
         return (int) $stmt->fetchColumn();
     }
