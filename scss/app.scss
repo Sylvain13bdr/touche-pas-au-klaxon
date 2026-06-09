@@ -1,0 +1,44 @@
+// =============================================================
+//  app.scss — Feuille de style principale
+//  L'identité graphique repose sur Bootstrap : on surcharge ses
+//  variables avec la palette imposée AVANT d'importer Bootstrap,
+//  afin que les futurs sites thématiques n'aient qu'à changer
+//  ces quelques valeurs (cf. brief de la mission).
+// =============================================================
+
+// --- 1) Palette imposée -> variables Bootstrap -----------------
+$primary:   #0074c7; // bleu
+$secondary: #384050; // anthracite
+$success:   #82b864; // vert
+$danger:    #cd2c2e; // rouge
+$light:     #f1f8fc; // bleu très clair
+$dark:      #384050; // anthracite (en-têtes de tableau, boutons)
+
+// Accent supplémentaire de la palette (bleu foncé) utilisé pour
+// les survols de liens et certains détails.
+$brand-blue-dark: #00497c;
+
+$link-color:       $primary;
+$link-hover-color: $brand-blue-dark;
+
+// --- 2) Import de Bootstrap (sources Sass) ---------------------
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// --- 3) Ajustements applicatifs --------------------------------
+body {
+  background-color: #ffffff;
+}
+
+// Barre d'en-tête « pilule » arrondie de la maquette
+.app-header {
+  border: 1px solid $dark;
+  border-radius: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+}
+
+// En-tête de tableau sombre conforme à la maquette
+.table-app thead th {
+  background-color: $dark;
+  color: #fff;
+  vertical-align: middle;
+}

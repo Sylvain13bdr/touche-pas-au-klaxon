@@ -1,0 +1,13 @@
+{
+    "name": "touche-pas-au-klaxon",
+    "version": "1.0.0",
+    "description": "Compilation du front (Bootstrap + Sass) pour l'application de covoiturage MVC.",
+    "private": true,
+    "scripts": {
+        "css": "sass scss/app.scss public/assets/css/app.css --style=compressed --no-source-map --quiet-deps",
+        "css:watch": "sass --watch scss/app.scss public/assets/css/app.css --quiet-deps"
+    },
+    "devDependencies": {
+        "bootstrap": "^5.3.3"
+    }
+}
