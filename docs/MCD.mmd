@@ -1,0 +1,25 @@
+erDiagram
+    AGENCE {
+        int id
+        string nom
+    }
+    UTILISATEUR {
+        int id
+        string nom
+        string prenom
+        string telephone
+        string email
+        string mot_de_passe
+        string role
+    }
+    TRAJET {
+        int id
+        datetime date_heure_depart
+        datetime date_heure_arrivee
+        int places_totales
+        int places_disponibles
+    }
+
+    UTILISATEUR ||--o{ TRAJET : "propose"
+    AGENCE ||--o{ TRAJET : "est depart de"
+    AGENCE ||--o{ TRAJET : "est arrivee de"
